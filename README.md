@@ -7,6 +7,6 @@ To enhance my programming and algorithmic skills, I started solving problems on 
 >Let's see what happens :)
 
 ## About Me
-My website - <a href="https://thecoducer.github.io">https://thecoducer.github.io</a>
+My website - <a href="https://thecoducer.github.io" target="_blank">https://thecoducer.github.io</a>
 
-Blog - <a href="http://www.thecoducer.com">http://www.thecoducer.com</a>
+Blog - <a href="http://www.thecoducer.com" target="_blank">http://www.thecoducer.com</a>
