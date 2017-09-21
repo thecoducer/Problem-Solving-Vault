@@ -1,4 +1,4 @@
-//https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/tutorial/
+// https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/tutorial/
 #include<stdio.h>
 #define MAX 1000
 typedef struct stack
