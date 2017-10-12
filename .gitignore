@@ -1,2 +1,5 @@
 
 *.o
+.vscode/c_cpp_properties.json
+HackerRank/*.exe
+*.exe
