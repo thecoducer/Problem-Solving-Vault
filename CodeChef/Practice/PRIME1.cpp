@@ -7,7 +7,7 @@ using namespace std;
 bool isprime(int p);
 
 int main() {
-	int i, t;
+	int t;
 	long m, n;
 	
 	cin>>t;
@@ -15,22 +15,20 @@ int main() {
 	    cin>>m;
 	    cin>>n;
 	    
-	    for(i=m;i<=n;i++){
+	    for(int i=m;i<=n;i++){
 	        if(i!=1 && isprime(i)){
-	            cout<<i<<endl;
+	            cout<<i<<"\n";
 	        }
 	    }
-	    }
+	}
 	return 0;
 }
 
 bool isprime(int p){
-    int i;
-
-    for(i=2;i*i<=p;i++){
+    for(int i=2;i*i<=p;i++){
         if(p%i==0){
            return false;
         }
     }
-        return true;
+    return true;
 }
