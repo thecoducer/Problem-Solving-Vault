@@ -27,6 +27,8 @@ int main(){
     }
     
     printf("%d\n",second%first);
+    /* maximum of Ai%Aj comes out to be the modulus of two largest unique elements 
+    i.e the largest no. and the second largest no. in the sequence */
 
     return 0;
 }
