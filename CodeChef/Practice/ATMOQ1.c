@@ -1,3 +1,5 @@
+//https://www.codechef.com/ACJQ2017/problems/ATMOQ1
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
