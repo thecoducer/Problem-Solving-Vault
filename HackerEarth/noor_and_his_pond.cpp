@@ -25,7 +25,7 @@ int main()
             sort(vec.begin(), vec.end());
 
             int ans = 0, cum = 0;
-            for(int i = 0; i < vec.size(); i ++){
+            for(int i = 0; i < vec.size(); i++){
                 cum += vec[i].second;
                 ans = max(ans , cum);
             }
