@@ -17,6 +17,7 @@ int main(){
         cin >> arr[i];
         
     //finding the next greater element
+    //and storing the index
     stack<long long int> s1;
     long long int nge[n];
     
@@ -35,6 +36,7 @@ int main(){
     }
     
     //finding the next smaller element
+    //and storing the index
     stack<long long int> s2;
     long long int nse[n];
     
