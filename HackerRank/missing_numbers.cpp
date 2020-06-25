@@ -1,47 +1,26 @@
-// https://www.hackerrank.com/challenges/missing-numbers/problem
-
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX 1000000
 
 int main() {
-    unordered_map<long, int> bmap;
-    unsigned long long int n, m;
-    long arr[MAX], temp;
+    int a[MAX] = {0}, n, m, t;
 
     cin >> n;
-
-    for(unsigned long long int i=0;i<n;i++){
-        cin >> arr[i];
+    for(int i=0;i<n;i++){
+        cin >> t;
+        a[t]--;
     }
 
     cin >> m;
+    for(int i=0;i<m;i++){
+        cin >> t;
+        a[t]++;
+    }
 
-    for(unsigned long long int i=0;i<m;i++){
-        cin >> temp;
-        if(bmap.find(temp) == bmap.end()){
-            bmap[temp] = 1;
-        }else{
-            bmap[temp]++;
+    for(int i=0;i<MAX;i++){
+        if(a[i] > 0){
+            cout << i << " ";
         }
     }
 
-    for(unsigned long long int i=0;i<n;i++){
-        if(bmap.find(arr[i]) != bmap.end()){
-            bmap[arr[i]]--;
-        }
-    }
-    vector<long> nv;
-
-    for(auto i : bmap){
-        if(i.second != 0){
-            nv.push_back(i.first);
-        }
-    }
-
-    sort(nv.begin(), nv.end());
-
-    for(auto i : nv){
-        cout << i << " ";
-    }
 }
