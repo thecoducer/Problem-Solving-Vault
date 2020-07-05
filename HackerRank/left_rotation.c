@@ -14,7 +14,7 @@ int main(void)
 
     for(i=0;i<n;i++)
         printf("%d ", a[(i+d)%n]);
-    //that circular logical technique used in queues has too been used here to print the nos.
+    // Circular logical technique used in queues has been used here to print the numbers
 
     return 0;
 }
