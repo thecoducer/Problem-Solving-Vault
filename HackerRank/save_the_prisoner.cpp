@@ -1,0 +1,20 @@
+// https://www.hackerrank.com/challenges/save-the-prisoner/problem
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int saveThePrisoner(int n, int m, int s) {
+    return (s+m-1)%n ? (s+m-1)%n : n;
+}
+
+int main() {
+    int n, m, s, t;
+
+    cin >> t;
+    while(t--) {
+        cin >> n >> m >> s;
+        cout << saveThePrisoner(n, m, s) << endl;
+    }
+
+    return 0;
+}
