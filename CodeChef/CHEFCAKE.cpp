@@ -20,21 +20,16 @@ int main() {
     while(t--) {
         cin >> n;
 
-        long digit_sum = 0;
+        long digits_sum = 0;
+        long ones = 0;
+
         for(long i=0;i<n;i++) {
             cin >> y;
-            digit_sum += y;
+            digits_sum += y;
+            ones = (ones * 10) + 1;
         }
-
-        long tot_permutations = factorial(n) / n;
-        digit_sum *= tot_permutations;
-        long result = 0;
-
-        for(long i=1, j=1;i<=n;i++) {
-            result += (j * digit_sum);
-            j *= 10;
-        }
-        cout << result << endl;
+        
+        cout << factorial(n-1) * digits_sum * ones << endl;
     }
     return 0;
 }
