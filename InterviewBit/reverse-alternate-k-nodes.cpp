@@ -28,7 +28,8 @@ listnode* solve(listnode* head, int k) {
         current = current->next;
     }
     
-    // link the unreversed part with the reversed part
+    // we call solve() for the rest of the list
+    // also, link the unreversed part with the reversed part
     // solve() will return prev when we have elements remaining
     // and, solve() will return NULL when we have reached the end of the list
     current->next = solve(current->next, k);
