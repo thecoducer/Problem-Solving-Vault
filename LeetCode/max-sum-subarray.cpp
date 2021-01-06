@@ -56,3 +56,9 @@ public:
     }
 };
 **/
+
+
+// to print the max sum subarray in the DP approach store the index 
+// when current + a[i] < a[i] as start and also store the index when
+// current_max > max_so_far as end
+// then print start to end
