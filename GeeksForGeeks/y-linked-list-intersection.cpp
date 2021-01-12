@@ -3,9 +3,14 @@ int intersectPoint(Node* head1, Node* head2)
     // Hashing can be used to solve this easily
     // but it would require O(N) space
     //
-    // Better solution is to make the first list circular
-    // and that makes a loop with the other list
-    // Now it is simple. We just need to find the start of the loop
+    // The idea here is to get to the common ground from 
+    // where we can traverse both the linked lists in parallel
+    //
+    // The better solution is to make the first list circular
+    // Now view the problem as the second list has a loop
+    // The loop is the first list
+    // So we traverse the loop and we get at a point where
+    // we can traverse both the linked lists in parallel
     
     Node *current = head1, *lastNode;
     int length = 0;
