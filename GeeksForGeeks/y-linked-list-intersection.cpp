@@ -50,3 +50,5 @@ int intersectPoint(Node* head1, Node* head2)
     
     return -1;
 }
+
+// O(N+M) time and O(1) space
