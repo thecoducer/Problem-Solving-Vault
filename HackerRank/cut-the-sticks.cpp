@@ -22,3 +22,6 @@ int main() {
     
     cutTheSticks(n, a);
 }
+
+// Time - O(nlogn)
+// Space - O(1)
