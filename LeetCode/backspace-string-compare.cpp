@@ -37,7 +37,7 @@ public:
             
             // if we've finished traversing a string
             // and still have some characters to traverse in another string
-            if((i >= 0) != (j >= 0)) {
+            if((i < 0 && j >= 0) || (i >= 0 && j < 0)) {
                 return false;
             }
             
