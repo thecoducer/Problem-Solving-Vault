@@ -1,4 +1,42 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n, len, max = 0, min = 0, count[100000] = {0};
+    cin >> n;
+    
+    for(int i=0;i<n;i++) {
+        cin >> len;
+        
+        // get the min and max value of stick
+        if(!min || len < min) {
+            min = len;
+        }
+        
+        if(len > max) {
+            max = len;
+        }
+        
+        // storing the count of each sticks
+        count[len]++;
+    }
+    
+    for(int i=min;i<=max;i++) {
+        if(count[i]) {
+            cout << n << endl;
+            n -= count[i];
+        }   
+    }
+    
+}
+
+// Time - O(N)
+// Space - O(1)
+
+
+
+
+/* #include<bits/stdc++.h>
 using namespace std;
 
 void cutTheSticks(int n, int a[]) {
@@ -21,7 +59,7 @@ int main() {
     }
     
     cutTheSticks(n, a);
-}
+} */
 
 // Time - O(nlogn)
 // Space - O(1)
