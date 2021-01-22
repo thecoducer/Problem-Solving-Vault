@@ -13,6 +13,8 @@ public:
 	            num += (s[i] - '0') * x;
 	            x *= 10;
 	            
+                // if num is greater than or equal to the length of the string
+                // then num cannot be equal to the length of the string before digits
 	            if(num >= len) {
 	                return 0;
 	            }
