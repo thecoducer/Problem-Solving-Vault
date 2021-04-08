@@ -36,3 +36,5 @@ public:
         return true;
     }
 };
+
+// Time: O(n) and Space: O(1)
