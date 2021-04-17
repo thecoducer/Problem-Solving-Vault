@@ -22,6 +22,7 @@ int intersectPoint(Node* head1, Node* head2)
             lastNode = current;    
         }
         
+        // keep count of nodes
         length++;
         current = current -> next;
     }
