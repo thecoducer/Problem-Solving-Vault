@@ -58,3 +58,34 @@ int intersectPoint(Node* head1, Node* head2)
 }
 
 // O(N+M) time and O(1) space
+
+
+/**
+ * Using two pointers approach
+ * Link: https://leetcode.com/problems/intersection-of-two-linked-lists/
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        ListNode *first = headA, *second = headB;
+        
+        while(first != second) {
+            if(first == NULL) {
+                first = headB;
+            }
+            
+            if(second == NULL) {
+                second = headA;
+            }
+            
+            if(first == second) {
+                return first;
+            }
+            
+            first = first->next;
+            second = second->next;
+        }
+        
+        return first;
+    }
+};
+*/
