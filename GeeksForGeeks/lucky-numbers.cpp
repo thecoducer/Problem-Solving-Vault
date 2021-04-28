@@ -27,3 +27,5 @@ public:
         return isLucky(n);
     }
 };
+
+// TC = O(sqrt(n))
