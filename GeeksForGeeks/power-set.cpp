@@ -4,9 +4,9 @@ void powerSetUtil(string s, vector<string> &result, int index, string curr) {
     int n = s.length();
     
     // append remaining chars to the current subset
-    for(int i=index+1; i<n; i++) {
+    for(int i=index; i<n; i++) {
         curr = curr + s[i];
-        powerSetUtil(s, result, i, curr);
+        powerSetUtil(s, result, i+1, curr);
         // once all subsets beginning with
         // initial "curr" are printed, remove
         // last character to consider a different
@@ -20,6 +20,6 @@ void powerSetUtil(string s, vector<string> &result, int index, string curr) {
 vector <string> powerSet(string s)
 {
     vector<string> result;
-    powerSetUtil(s, result, -1, "");
+    powerSetUtil(s, result, 0, "");
     return result;
 }
