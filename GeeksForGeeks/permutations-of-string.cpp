@@ -8,6 +8,9 @@ class Solution
 	            for(int i=l;i<=r;i++) {
 	                swap(s[l], s[i]);
 	                permute(result, s, l+1, r);
+                    // backtrack to restore the altered string back
+                    // to its original form
+                    // The code works fine without backtracking
 	                swap(s[l], s[i]);
 	            }
 	        }
