@@ -5,7 +5,7 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> res;
         
-        // we will use two pointers since we are given a sorted array
+        // as we are given a sorted array, we can use the two pointers approach
         
         int start = 0;
         int end = nums.size() - 1;
