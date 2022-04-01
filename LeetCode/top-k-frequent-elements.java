@@ -4,7 +4,8 @@ import java.util.*;
 
 class Solution1 {
     /**
-     * 
+     * Displays in order
+     * if same frequency for two elements then take the greater element
      * TC: O(k logN + N)
      * SC: O(N)
      */
@@ -41,6 +42,7 @@ class Solution1 {
 
 class Solution {
     /**
+     * Displays in any order
      * TC: O(N)
      * SC: O(N)
      */
