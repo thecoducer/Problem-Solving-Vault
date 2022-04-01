@@ -1,10 +1,6 @@
 // https://leetcode.com/problems/top-k-frequent-elements/
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 class Solution1 {
     /**
