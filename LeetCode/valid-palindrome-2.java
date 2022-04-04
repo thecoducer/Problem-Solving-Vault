@@ -6,6 +6,7 @@ class Solution {
         int start = 0;
         int end = len - 1;
         
+        // using two pointers
         while(start <= end) {
             if(s.charAt(start) == s.charAt(end)) {
                 start++;
