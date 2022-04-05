@@ -10,10 +10,15 @@ class Solution {
         // matrix[0][0] is an overlapping cell for rows and cols
         // so we are using another variable as a flag if zeroth col contains any zero
 
+        // using the first row and column as dummy arrays where we make a cell zero
+        // if that cell's row or column contains any cell that is zero
         for(int i=0;i<rows;i++) {
+            
+            // zeroth column
             if(matrix[i][0] == 0) {
                 col0 = 0;
             }
+
             for(int j=1;j<cols;j++) {
                 if(matrix[i][j] == 0) {
                     matrix[i][0] = 0;
