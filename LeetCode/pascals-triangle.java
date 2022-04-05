@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
+    /**
+     * 
+     * TC: O(numRows ^ 2)
+     * SC: O(numRows ^ 2)
+     */
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> matrix = new ArrayList<List<Integer>>();
         List<Integer> row, prevRow = null;
