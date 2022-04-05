@@ -14,14 +14,16 @@ class Solution {
         for(int i=0;i<numRows;i++) {
             row = new ArrayList<>();
             for(int j=0;j<=i;j++) {
+                // edges should have 1
                 if(j == 0 || j == i) {
                     row.add(1);
                 }else{
+                    // inner elements
                     row.add(prevRow.get(j-1) + prevRow.get(j));
                 }
             }
             prevRow = row;
-                matrix.add(row);
+            matrix.add(row);
         }
 
         return matrix;
