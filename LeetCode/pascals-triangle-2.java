@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
+    /**
+     * 
+     * TC: O(rowIndex ^ 2)
+     * SC: O(1)
+     */
     public List<Integer> getRow(int rowIndex) {
         List<Integer> row = new ArrayList<>();
         List<Integer> prevRow = new ArrayList<>();
