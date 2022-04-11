@@ -1,3 +1,5 @@
+// https://www.geeksforgeeks.org/find-missing-value-from-the-given-equation-a-b-c/
+
 class Solution {
     public static void main(String args[]) {
         String equation = "3+2=x";
