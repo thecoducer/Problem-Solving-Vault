@@ -1,4 +1,9 @@
 class Solution {
+    /**
+     * 
+     * TC: O(N)
+     * SC: O(1)
+     */
     public boolean isPalindrome(ListNode head) {
         ListNode secondListHead, curr, prev, next, slow, fast;
         slow = fast = curr = head;
