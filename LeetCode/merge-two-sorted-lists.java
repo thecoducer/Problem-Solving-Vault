@@ -1,5 +1,11 @@
 class Solution {
+    /**
+     * TC: O(N+M)
+     * SC: O(1)
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+        // used pointer rearrangement technique
         
         // if any of the list is empty, return the other list
         if(l1 == null) {
