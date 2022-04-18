@@ -1,4 +1,9 @@
 class Solution {
+    /**
+     * 
+     * TC: O(N)
+     * SC: O(26) ~ O(1)
+     */
     public int firstUniqChar(String s) {
         int[] freq = new int[26];
         
