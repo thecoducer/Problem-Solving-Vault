@@ -7,8 +7,8 @@ class Solution {
     public int firstUniqChar(String s) {
         int[] freq = new int[26];
         
-        for(int i=0;i<s.length();i++) {
-            int index = s.charAt(i) - 'a';
+        for(char c : s.toCharArray()) {
+            int index = c - 'a';
             freq[index]++;
         }
         
