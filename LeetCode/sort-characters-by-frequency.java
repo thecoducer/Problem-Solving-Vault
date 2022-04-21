@@ -2,6 +2,11 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 class Solution {
+    /**
+     * 
+     * TC: O(N log N)
+     * SC: O(N)
+     */
     public String frequencySort(String s) {
         Map<Character, Integer> countMap = new HashMap<>();
         
@@ -14,17 +19,13 @@ class Solution {
         for(Map.Entry<Character, Integer> entry : countMap.entrySet()) {
             maxHeap.add(entry);
         }
-        
-        System.out.println(maxHeap.size());
 
         int len = s.length();
         StringBuilder sb = new StringBuilder();
-        for(int i=0;i<len;i++) {
-            if(maxHeap.size() == 0) {
-                break;
-            }
+        for(int i=0;i<len && maxHeap.size() > 0;i++) {
             char c = maxHeap.poll().getKey();
             int count = countMap.get(c);
+
             for(int j=0;j<count;j++) {
                 sb.append(c);
             }
