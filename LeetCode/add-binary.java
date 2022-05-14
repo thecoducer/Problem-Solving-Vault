@@ -19,7 +19,9 @@ class Solution {
             }
             
             carry = sum / base;
+            // sum >> 1 will yield same result because (right shift) divides a number by 2
             sb.insert(0, (sum % base));
+            // sum & 1 will also yield same result because (and) gives us the remainder after dividing by 2
         }
         
         return sb.toString();
