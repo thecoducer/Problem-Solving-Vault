@@ -13,8 +13,7 @@ public class Solution {
                 res = res + 1;
             }
             
-            // left shifting the original number to discard off the already
-            // processed bits
+            // left shifting the original number to discard the LSB
             n = n >> 1;
         }
         
