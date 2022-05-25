@@ -52,4 +52,6 @@ class Solution {
         }
         return sum;
     }
+}public class happy-number {
+    
 }
