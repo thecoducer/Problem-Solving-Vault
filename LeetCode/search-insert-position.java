@@ -16,5 +16,9 @@ class Solution {
         }
         
         return low;
+
+        // the low pointer can go upto high + 1
+        // at this point low is equal to high + 1
+        // that's where we need to insert the target value
     }
 }
