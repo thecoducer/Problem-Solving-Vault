@@ -12,6 +12,8 @@ class Solution {
                 colNum -= 26;
             }
             
+            // 64 is ascii value of @
+            // 65 is A
             char c = (char) (64 + asciiIndex);
             sb.insert(0, c);
             
