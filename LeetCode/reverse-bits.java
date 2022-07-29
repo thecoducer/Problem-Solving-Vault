@@ -1,6 +1,10 @@
 public class Solution {
-    // you need treat n as an unsigned value
+    // you need to treat n as an unsigned value
     public int reverseBits(int n) {
+        if(n == 0) {
+            return 0;
+        }
+        
         int res = 0;
         
         // going through 32 bits
