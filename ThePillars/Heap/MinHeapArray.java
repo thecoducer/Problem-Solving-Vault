@@ -1,8 +1,8 @@
 public class MinHeapArray {
 
-    int[] data;
-    int capacity;
-    int heapSize;
+    private int[] data;
+    private int capacity;
+    private int heapSize;
 
     MinHeapArray(int capacity) {
         this.heapSize = 0;
@@ -114,8 +114,8 @@ public class MinHeapArray {
         minHeap.insertKey(20);
         minHeap.insertKey(15);
 
-        int k = 3;
-
+        // finding the kth smallest element
+        int k = 0;
         for (int i = 0; i < k - 1; i++) {
             minHeap.extractMin();
         }
