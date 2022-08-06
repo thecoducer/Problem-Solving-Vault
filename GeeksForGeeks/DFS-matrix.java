@@ -19,12 +19,9 @@ class Solution {
         }
     }
 
-    private static boolean isValid(int row, int col, boolean[][] visited) {
+    // function to check if the coordinates are out of bounds
+    private static boolean isValid(int row, int col) {
         if (row < 0 || row >= ROW || col < 0 || col >= COL) {
-            return false;
-        }
-
-        if (visited[row][col]) {
             return false;
         }
 
@@ -43,8 +40,7 @@ class Solution {
             row = element.first;
             col = element.second;
 
-            if (!isValid(row, col, visited)) {
-                System.out.println("row = " + row + " col = " + col);
+            if (isValid(row, col) && visited[row][col]) {
                 continue;
             }
 
@@ -54,7 +50,10 @@ class Solution {
             for (int i = 0; i < 4; i++) {
                 int adjX = row + dROW[i];
                 int adjY = col + dCOL[i];
-                stack.push(new Pair(adjX, adjY));
+
+                if (isValid(adjX, adjY)) {
+                    stack.push(new Pair(adjX, adjY));
+                }
             }
         }
         return dfs;
