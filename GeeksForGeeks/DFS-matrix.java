@@ -4,6 +4,9 @@ import java.util.*;
 
 class Solution {
 
+    // TC: O(N * M)
+    // SC: O(N * M)
+
     private static final int ROW = 3;
     private static final int COL = 3;
     private static final int dROW[] = { 0, 1, 0, -1 };
