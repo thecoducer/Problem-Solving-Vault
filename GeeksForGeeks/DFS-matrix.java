@@ -47,6 +47,7 @@ class Solution {
             visited[row][col] = true;
             dfs.add(matrix[row][col]);
 
+            // lookup the adjacent cells 
             for (int i = 0; i < 4; i++) {
                 int adjX = row + dROW[i];
                 int adjY = col + dCOL[i];
