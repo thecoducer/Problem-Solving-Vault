@@ -14,7 +14,7 @@ class Solution {
         dfsList.add(v);
 
         ArrayList<Integer> adjacentVertices = adj.get(v);
-        
+
         for(int vertex : adjacentVertices) {
             if(!visited[vertex]) {
                 dfs(vertex, adj, visited, dfsList);
