@@ -1,8 +1,11 @@
-// https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
+// https://www.geeksforgeeks.org/connected-components-in-an-undirected-graph/
 
 import java.util.*;
 
 class Graph {
+
+    // TC: O(V + E) using DFS
+    
 
     int V;
     ArrayList<ArrayList<Integer>> adjList;
