@@ -1,5 +1,7 @@
 class Solution {
 
+    // M is an adjacency matrix
+    // that represents the graph
     public int findCircleNum(int[][] M) {
         boolean[] visited = new boolean[M.length];
         int count = 0;
