@@ -33,6 +33,8 @@ class Solution1 {
         }
 
         Queue<TreeNode> q = new LinkedList<>();
+        // we can also use Stack here
+        // it doesn't matter
 
         q.add(root.left);
         q.add(root.right);
