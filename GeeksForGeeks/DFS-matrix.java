@@ -51,6 +51,7 @@ class Solution {
             dfs.add(matrix[row][col]);
 
             // lookup the adjacent cells 
+            // this is where we use the direction vectors to traverse the adjacent cells
             for (int i = 0; i < 4; i++) {
                 int adjX = row + dROW[i];
                 int adjY = col + dCOL[i];
