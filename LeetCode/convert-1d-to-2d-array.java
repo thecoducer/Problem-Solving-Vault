@@ -12,6 +12,9 @@ class Solution {
         
         int result[][] = new int[m][n];
 
+        // m = rows
+        // n = columns
+
         for (int i = 0; i < len; i++) {
             result[i / n][i % n] = original[i];
         }
