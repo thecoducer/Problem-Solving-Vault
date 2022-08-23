@@ -1,5 +1,6 @@
 class Solution {
-
+    // TC: O(N)
+    // SC: O(N)
     public int[][] construct2DArray(int[] original, int m, int n) {
         int len = original.length;
 
