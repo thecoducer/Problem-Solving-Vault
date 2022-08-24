@@ -13,6 +13,10 @@ class Solution {
         // the way how we keep the count here is similar to the
         // way we count total digits in an integer
 
+        // 1 keeps on getting added when we hit the base case
+
+        // recursion explanation : https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/1770060/C%2B%2B-oror-Recursive-oror-DFS-oror-Example-Dry-Run-oror-Well-Explained
+
         return Math.max(dfs(root.left, max), dfs(root.right, max)) + 1;
     }
 }
