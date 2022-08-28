@@ -12,7 +12,7 @@ class Solution1 {
         // When head.next is null for the first time
         // head is 5
         // it returns to function call stack reverseList(4)
-        // so head is 4 now
+        // so head is now 4
         
         // 4 -> 5 -> next = head;
         // reversed
