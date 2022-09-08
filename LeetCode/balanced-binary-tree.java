@@ -4,6 +4,8 @@
 // TC : O(N)
 
 class Solution {
+    // the idea here is to modify the implementation of finding the
+    // height of the tree and identify whether the tree is a balanced tree or not
     public boolean isBalanced(TreeNode root) {
         return dfsHeight(root) != -1;
     }
