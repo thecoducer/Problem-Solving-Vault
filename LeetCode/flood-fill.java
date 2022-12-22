@@ -9,6 +9,7 @@ class Solution {
         }
 
         fill(image, sr, sc, image[sr][sc], color);
+        
         return image;
     }
 
