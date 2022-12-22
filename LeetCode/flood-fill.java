@@ -9,7 +9,7 @@ class Solution {
         }
 
         fill(image, sr, sc, image[sr][sc], color);
-        
+
         return image;
     }
 
@@ -19,7 +19,10 @@ class Solution {
             return;
         }
 
+        // overwrite the color
         image[sr][sc] = newColor;
+
+        // recursive calls for DFS
         fill(image, sr + 1, sc, oldColor, newColor);
         fill(image, sr - 1, sc, oldColor, newColor);
         fill(image, sr, sc + 1, oldColor, newColor);
