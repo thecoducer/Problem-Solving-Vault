@@ -18,6 +18,7 @@ class Solution {
         ListNode head = null, tail = null;
         
         // setting the head
+        // head of which ever list has smaller value is the head of the result list
         if(l1.val < l2.val) {
             head = l1;
             l1 = l1.next;
