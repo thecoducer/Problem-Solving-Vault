@@ -5,7 +5,7 @@ class Solution
     static ArrayList<Integer> levelOrder(Node node) 
     {
         // BFS or Level Order Traversal of a Tree
-        LinkedList<Node> queue = new LinkedList<>();
+        Queue<Node> queue = new ArrayDeque<>();
         ArrayList<Integer> bfs = new ArrayList<>();
         
         queue.add(node);
