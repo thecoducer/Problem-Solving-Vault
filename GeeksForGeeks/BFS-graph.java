@@ -3,28 +3,26 @@
 class Solution {
     
     public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
-        boolean[] visited = new boolean[V];
-        LinkedList<Integer> queue = new LinkedList<>();
         ArrayList<Integer> bfs = new ArrayList<>();
+        Queue<Integer> queue = new ArrayDeque<>();
+        Map<Integer, Boolean> visited = new HashMap<>();
         
-        // mentioned in the question to start from 0
-        queue.add(0);
-        visited[0] = true;
+        queue.offer(0);
+        visited.put(0, true);
         
-        while(queue.size() != 0) {
+        while(!queue.isEmpty()) {
             int element = queue.poll();
             bfs.add(element);
             
             ArrayList<Integer> adjacentVertices = adj.get(element);
             
             for(int vertex : adjacentVertices) {
-                if(!visited[vertex]) {
-                    queue.add(vertex);
-                    visited[vertex] = true;
+                if(!visited.containsKey(vertex)) {
+                    queue.offer(vertex);
+                    visited.put(vertex, true);
                 }
             }
         }
         
-        return bfs;
     }
 }
