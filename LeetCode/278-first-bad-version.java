@@ -3,6 +3,8 @@
 
       public class Solution extends VersionControl {
 
+        // used binary search technique
+
         public int firstBadVersion(int n) {
             return findFirstBadVersion(0, n);
         }
@@ -12,7 +14,7 @@
                 return low;
             }
     
-            int mid = low + (high - low) / 2;
+            int mid = low + (high - low) / 2; // prevents integer overflow
     
             if (isBadVersion(mid)) {
                 return findFirstBadVersion(low, mid - 1);
