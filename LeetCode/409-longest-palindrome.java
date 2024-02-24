@@ -1,13 +1,13 @@
 class Solution {
 
     public int longestPalindrome(String s) {
-        char[] str = s.toCharArray();
+        if(s.length() == 1)
+            return 1;
+
         Map<Character, Integer> charMap = new HashMap<>();
 
-        // counting character occurrences
-        for (int i = 0; i < str.length; i++) {
-            charMap.put(str[i], charMap.getOrDefault(str[i], 0) + 1);
-        }
+        for (int i = 0; i < s.length(); i++) 
+            charMap.put(s.charAt(i), charMap.getOrDefault(s.charAt(i), 0) + 1);
 
         int sum = 0;
         boolean odd = false;
