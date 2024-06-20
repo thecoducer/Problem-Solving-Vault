@@ -1,8 +1,35 @@
 // https://leetcode.com/problems/product-of-array-except-self/
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class ProductOfArrayExceptSelf {
+
+    public static int[] productExceptSelfUsingExtraSpace(int[] nums) {
+        int len = nums.length;
+
+        // fill prefix array
+        int[] prefix = new int[len];
+        prefix[0] = 1;
+        for (int i = 1; i < len; i++) {
+            prefix[i] = prefix[i - 1] * nums[i - 1];
+        }
+
+        // fill suffix array
+        int[] suffix = new int[len];
+        suffix[len - 1] = 1;
+        for (int i = len - 2; i >= 0; i--) {
+            suffix[i] = suffix[i + 1] * nums[i + 1];
+        }
+
+        // multiply each prefix and suffix to get the ans array
+        int[] ans = new int[len];
+        for (int i = 0; i < len; i++) {
+            ans[i] = prefix[i] * suffix[i];
+        }
+
+        return ans;
+    }
 
     public static int[] productExceptSelf(int[] nums) {
         int len = nums.length;
@@ -25,7 +52,12 @@ public class ProductOfArrayExceptSelf {
     }
 
     public static void main(String args[]) {
-        int[] result = productExceptSelf(new int[]{1, 2, 3, 4});
-        Arrays.stream(result).forEach(System.out::println);
+        System.out.println(Arrays.stream(productExceptSelf(new int[] { 1, 2, 3, 4 }))
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining(", ")));
+
+        System.out.println(Arrays.stream(productExceptSelfUsingExtraSpace(new int[] { 1, 2, 3, 4 }))
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining(", ")));
     }
 }
