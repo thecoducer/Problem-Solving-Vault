@@ -13,7 +13,7 @@ GROUP BY id
 SELECT id, num FROM ranks
 where rnk = 1;
 
-/* all_ids: Does a union all and aggregates all the ids. requester_id + accepter_id is a combination key here.
+/* all_ids: Does an union all and aggregates all the ids. requester_id + accepter_id is a combination key here.
 Every occurence of a particular id in any of these columns adds up to the friends list.
 The id that occured the most number of times has the most number of friends.
 ranks: Orders the occurences in descending order and assigns ranks to them. 
@@ -27,5 +27,3 @@ Testcase for the follow-up question:
 
 ids 1 and 3 are the people with most number of friends.
 */
-
-
