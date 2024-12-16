@@ -7,6 +7,8 @@
   LIMIT 1
 )
 UNION ALL
+-- When the movie title and username are the same, 
+-- using UNION ALL will retain both results.
 (
   SELECT m.title AS results
   FROM MovieRating r LEFT JOIN Movies m
