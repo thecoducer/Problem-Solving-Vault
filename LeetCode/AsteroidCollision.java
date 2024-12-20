@@ -8,11 +8,11 @@ class Solution {
             while(!stack.isEmpty() && stack.peek() > 0 && a < 0) {
                 if(stack.peek() < Math.abs(a)) {
                     stack.pop();
-                    continue;
+                    continue; //there can be other asteroid that can collide with 'a'
                 }else if(stack.peek() == Math.abs(a)) {
                     stack.pop();
                 }
-                a = 0;
+                a = 0; // asteroid got destroyed
             }
             if(a != 0) {
                 stack.push(a);
