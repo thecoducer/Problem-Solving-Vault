@@ -5,7 +5,7 @@ class Solution {
         int len = A.length;
         int breakPoint = -1;
 
-        // find the break point
+        // find the break point where A[i] is less than A[i+1]
         for (int i = len - 2; i >= 0; i--) {
             if (A[i] < A[i + 1]) {
                 breakPoint = i;
@@ -13,6 +13,9 @@ class Solution {
             }
         }
 
+        // exhausted iterating the array still we couldn't find a break point
+        // this means we are currently at the last permutation
+        // so return the first lexicographically sorted permutation
         if (breakPoint == -1) {
             reverse(A, 0);
             return;
