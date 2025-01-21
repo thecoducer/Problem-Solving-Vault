@@ -13,14 +13,17 @@ class Solution {
             }
         }
 
-        // exhausted iterating the array still we couldn't find a break point
-        // this means we are currently at the last permutation
+        // we couldn't find a break point even after traversing the whole array
+        // backwards
+        // this means we have the last permutation number as input
         // so return the first lexicographically sorted permutation
         if (breakPoint == -1) {
             reverse(A, 0);
             return;
         }
 
+        // find the next greater element backwards before the break point
+        // swap it with element at the breakPoint
         for (int i = len - 1; i > breakPoint; i--) {
             if (A[i] > A[breakPoint]) {
                 swap(A, i, breakPoint);
@@ -47,3 +50,6 @@ class Solution {
         A[n] = t;
     }
 }
+
+// TC: O(N)
+// SC: O(1)
