@@ -2,7 +2,7 @@ class Solution {
     public void setZeroes(int[][] matrix) {
         int rows = matrix.length;
         int cols = matrix[0].length;
-        int col0 = 1;
+        boolean zerothColumnHasZero = false;
 
         /*
          * Intuition: We traverse the original matrix and mark
@@ -11,15 +11,14 @@ class Solution {
          * of some extra space. That's the catch here to have O(1) space complexity.
          * 
          * matrix[0][0] is an overlapping cell for both rows and cols.
-         * So we set col0 to zero if 0th column contains a zero element.
+         * So we make zerothColumnHasZero as true, if 0th column contains a zero
+         * element.
          */
 
         for (int i = 0; i < rows; i++) {
-            // if 0th column contains a zero element
             if (matrix[i][0] == 0) {
-                col0 = 0;
+                zerothColumnHasZero = true;
             }
-
             for (int j = 1; j < cols; j++) {
                 // if a cell is zero
                 // mark cells in first row and column
@@ -31,7 +30,7 @@ class Solution {
         }
 
         // Traverse the matrix backwards
-        // The first row and column know which rows and columns 
+        // The first row and column know which rows and columns
         // need to be entirely filled with zeros.
         for (int i = rows - 1; i >= 0; i--) {
             for (int j = cols - 1; j >= 1; j--) {
@@ -41,7 +40,7 @@ class Solution {
                     matrix[i][j] = 0;
                 }
             }
-            if (col0 == 0) {
+            if (zerothColumnHasZero) {
                 matrix[i][0] = 0;
             }
         }
