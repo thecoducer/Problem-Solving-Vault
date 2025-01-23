@@ -1,6 +1,10 @@
 import java.util.*;
 
 class Solution {
+    /**
+     * [1,2,3] -> [1,3,2]
+     * [2,1,5,3,4,0,0] -> [2,1,5,4,0,0,3]
+     */
     public void nextPermutation(int[] A) {
         int len = A.length;
         int breakPoint = -1;
