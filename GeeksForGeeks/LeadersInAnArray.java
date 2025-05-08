@@ -4,7 +4,8 @@ class Solution {
         ArrayList<Integer> leaders = new ArrayList<>();
 
         // The idea is to iterate the array backwards
-        // and store the largest element found at each iteration
+        // and store the largest element found at each iteration.
+        // The rightmost element will always be a leader because there is no element after it.
         int currentLead = nums[len - 1];
         leaders.add(currentLead);
         for(int i=len - 2; i>=0; i--) {
