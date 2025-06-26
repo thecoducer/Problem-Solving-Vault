@@ -1,4 +1,7 @@
 class Solution {
+    // We use binary search on answers technique to solve this.
+    // We first need to find the range on which we are going to apply the binary search.
+    // This range consists of possible answers.
     public int minEatingSpeed(int[] piles, int h) {
         int maxEatingSpeed = Arrays.stream(piles).max().getAsInt();
         return findMinEatingSpeed(piles, 1, maxEatingSpeed, h);
