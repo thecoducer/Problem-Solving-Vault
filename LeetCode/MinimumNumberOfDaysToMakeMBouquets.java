@@ -33,6 +33,7 @@ class Solution {
                     consecutiveBloomed = 0;
                 }
             } else {
+                // we reset the counter if we encounter an unbloomed flower
                 consecutiveBloomed = 0;
             }
         }
