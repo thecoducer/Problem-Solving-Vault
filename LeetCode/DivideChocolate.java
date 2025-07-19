@@ -20,7 +20,7 @@ public class DivideChocolate {
 
     public static int maximizeSweetness(int[] sweetness, int k) {
         int low = 1;
-        int high = Arrays.stream(sweetness).sum();
+        int high = Arrays.stream(sweetness).sum() / (k + 1);
         int best = 0;
 
         while (low <= high) {
