@@ -20,12 +20,13 @@ public class DivideChocolate {
 
     public static int maximizeSweetness(int[] sweetness, int k) {
         int low = 1;
-        int high = Arrays.stream(sweetness).sum() / (k + 1);
-        int best = 0;
+        int high = Arrays.stream(sweetness).sum() / (k + 1); // nobody can get more sweetness than an even split
+        int best = 1;
 
         while (low <= high) {
             int mid = low + (high - low) / 2;
 
+            // if division is possible then find maximum total sweetness that can be achieved (greedy)
             if (isDivisionPossible(sweetness, mid, k)) {
                 best = mid;
                 low = mid + 1;
@@ -41,12 +42,15 @@ public class DivideChocolate {
 
         for (int v : sweetness) {
             sum += v;
+            // when total sweetness becomes greater than or equal to the mid
+            // then we cut the chocolate and take out a chunk out of it.
             if (sum >= mid) {
                 sum = 0;
                 chunks++;
             }
         }
 
+        // k + 1 pieces are required
         return chunks >= k + 1;
     }
 }
