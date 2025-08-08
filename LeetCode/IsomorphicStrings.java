@@ -8,6 +8,11 @@ class Solution {
                     return false;
                 }
             } else {
+                // s = "ejo"
+                // t = "geg"
+                // Expected: false
+                // 'g' in t is already mapped to 'e' and can't be mapped to 'o' again
+                // therefore we check if we have an already mapped character. 
                 if(map.containsValue(t.charAt(i))) {
                     return false;
                 }
