@@ -8,6 +8,8 @@ class LRUCache {
      * Otherwise insert the new value.
      * Check cache size before insertion. If exceeds the capacity, then evict least recently used value.
      * Then create the new node, add it to front and insert it to the cache.
+     * 
+     * We use the map for cache and the doubly linked list for ordering.
      */
 
     class Node {
