@@ -12,8 +12,13 @@ class Solution {
             int mid = low + (high - low) / 2;
             int totalHours = calculateTotalHours(piles, mid);
             if (totalHours > h) {
+                // if totalHours is greater than h, then it is too slow
+                // we need to increase the eating speed
                 low = mid + 1;
             } else {
+                // if totalHours < h, it means Koko can finish on time or earlier
+                // but this speed might not be the minimum
+                // so we search in the leftmost space to get a minimum eating speed
                 high = mid - 1;
             }
         }
