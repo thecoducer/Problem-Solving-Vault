@@ -34,6 +34,7 @@ public class DivideChocolate {
                 high = mid - 1;
             }
         }
+        
         return best;
     }
 
