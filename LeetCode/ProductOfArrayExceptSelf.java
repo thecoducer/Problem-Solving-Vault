@@ -31,6 +31,7 @@ public class ProductOfArrayExceptSelf {
         return ans;
     }
 
+    // more space efficient
     public static int[] productExceptSelf(int[] nums) {
         int len = nums.length;
         int ans[] = new int[len];

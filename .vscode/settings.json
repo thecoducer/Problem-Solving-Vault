@@ -3,9 +3,10 @@
         "iostream": "cpp"
     },
     "java.project.sourcePaths": [
+        "ThePillars/LinkedList",
         "Misc",
         "LeetCode",
-        "ThePillars/LinkedList"
+        "ThePillars/DSU"
     ],
     "java.debug.settings.onBuildFailureProceed": true
 }
